@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:rgb(21, 128, 0);
+    padding: 20px;
+}
+.todocontainer{
+    width:50%;
+    background:pink;
+    border-radius:15px;
+    padding:35px;
+    margin:200px auto;
+    max-width: 800px;
+}
+.todocontainer h1{
+    font-size: 45px;
+    color:red;
+}
+.todocontainer .input{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin: 25px 0px;
+}
+.input input{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    padding-left: 20px;
+    font-size: 25px;
+    outline: none;
+    transition: all 0.5s ease;
+}
+.input input :focus{
+    border-color:red;
+}
+.input button{
+    outline: none;
+    background:red;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.4;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.input button.active{
+    opacity:1;
+    pointer-events:auto;
+}
+.todocontainer .footer{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size:50px;
+    width: 100%;
+    margin-top: 30px;
+}
+.last button{
+    background:red;
+    color: #fff;
+    font-size:20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 8px 8px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.4;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.last button.active{
+    opacity:2;
+    pointer-events: auto;
+}
+.todocontainer .tasks{
+    max-height: 250px;
+    overflow-y: auto;
+}
+.todotasks li{
+    position: relative;
+    list-style: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0 17px;
+    height: 45px;
+    line-height:60px;
+    cursor: default;
+    overflow: hidden;
+}
+.todotasks li .icon{
+    position: absolute;
+    right: -45px;
+    background: #f02;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.todotasks li:hover .icon{
+    right: 0px;
+  }

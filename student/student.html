@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="student.css">
+</head>
+<body align="center">
+    <h2>Student registration form</h2>
+    <div class="info">
+    
+	First Name:<input type="text" name="fname" id="fname"><br>
+	Lastname:	<input type="text" name="fname" id="lname"><br>		
+	Email:<input type="text" name="email" id="email"><br>
+	Age:<input type="text" name="age" id="age"><br>
+    Phoneno.:<input type="text" id="number" placeholder="enter number here" size="10"><br>
+    joindate:<input type="date" name="date" id="date"><br>
+	Button: <input type="button" name="button" id="btn" value="submit" onclick="AddRow()"><br><br><br>
+</div>
+	-------------------------------------------------------------------------------------------------------------------------------			
+        <h2>Students Information</h2>
+		<table border="4" id="info" align="center">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>lastname</th>
+					<th>Email</th>
+					<th>BOD</th>
+                    <th>Phone no.</th>
+                    <th>Joindate</th>
+                    </tr>
+			</thead>
+		</table>
+	</center>
+    <script> var info1 = [];
+		var info2 = [];
+		var info3 = [];
+		var info4 = [];
+        var info5 = [];
+        var info6= [];
+        var n = 1;
+		var x = 0;
+        function AddRow(){
+            var AddRown = document.getElementById('info');
+			var NewRow = AddRown.insertRow(n);
+            info1[x] = document.getElementById("fname").value;
+			info2[x] = document.getElementById("lname").value;
+			info3[x] = document.getElementById("email").value;
+			info4[x] = document.getElementById("age").value;
+            info5[x] = document.getElementById("number").value;
+            info6[x] = document.getElementById("date").value;
+            var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+            cel1.innerHTML = info1[x];
+			cel2.innerHTML = info2[x];
+			cel3.innerHTML = info3[x];
+			cel4.innerHTML = info4[x];
+            cel5.innerHTML = info5[x];
+            cel6.innerHTML = info6[x];
+            n++;
+			x++;
+		}
+
+</script>
+</body>
+</html>

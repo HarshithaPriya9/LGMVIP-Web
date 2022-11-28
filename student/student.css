@@ -1,0 +1,20 @@
+table{
+	margin-top: 50px;
+	text-align: center;
+	background:pink;
+	color: blue;
+}
+.info{
+    color:blue;
+    
+}
+body{
+	background:pink;
+}
+#show th, #show td{
+	padding: 13px;
+}
+
+#btna td input{
+	width: 100%;
+}
